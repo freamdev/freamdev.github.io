@@ -1,0 +1,10 @@
+#table td 
+{
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.showcase{
+    width: 320px;
+    height: 240px;
+}
