@@ -1,10 +1,105 @@
-#table td 
+.table{
+    margin-left: 15%;
+    width: 70%;
+}
+
+/* .table td 
 {
     text-align: center; 
     vertical-align: middle;
-}
+} */
 
 .showcase{
     width: 320px;
     height: 240px;
 }
+
+hr{
+    width: 90%;
+    border-color: #f5e6cc;
+}
+
+body{
+    background-color: #222629;
+    color: #f5e6cc;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 92px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+h2 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.contentZone{
+    width: 60%;
+    padding-top: 3%;
+    padding: 1%;
+    margin-left: 20%;
+    padding-bottom: 30px;
+    background-color: #1a1c1f;
+    box-shadow: 5px 5px #2a3238;
+}
+
+
+
+.column {
+    padding-right: 30px;
+    white-space: pre-line;
+    float: left;
+    /* width: 50%; */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  a {
+    color: #ecc175;
+  }
+
+  .playText {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+  }
+
+  .playTextString{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 89px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #ecc175;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+
+  .splashImage{
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 30px;
+  }
+
+  .splashImageContainer{
+    position: relative;
+    text-align: center;
+  }
