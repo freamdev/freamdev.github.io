@@ -42,6 +42,7 @@ h2 {
 }
 
 .contentZone{
+  margin-top: 10px;
     width: 60%;
     padding-top: 3%;
     padding: 1%;
@@ -49,8 +50,15 @@ h2 {
     padding-bottom: 30px;
     background-color: #1a1c1f;
     box-shadow: 5px 5px #2a3238;
+    border-radius: 10px;
 }
 
+.tablet{
+  border: 16px black solid;
+  border-top-width: 50px;
+  border-bottom-width: 50px;
+  border-radius: 36px;
+}
 
 
 .column {
@@ -91,12 +99,10 @@ h2 {
 
 
   .splashImage{
-    padding: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    border-radius: 30px;
   }
 
   .splashImageContainer{
