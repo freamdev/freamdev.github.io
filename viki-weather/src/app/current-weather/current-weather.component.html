@@ -1,0 +1,52 @@
+<div id="main">
+  <div id="top">
+    <div id="city-status">
+      <p id="city">{{ currentWeather.city }}, {{ currentWeather.countryCode }}</p>
+      <p id="status">{{ currentWeather.description }}</p>
+    </div>
+    <div id="datetime">
+      <p id="weekday">{{ currentWeather.unixTime * 1000 | date:'EE' }}</p>
+      <p id="date">{{ currentWeather.unixTime * 1000 | date:'MMM d' }}</p>
+      <p id="time">{{ currentWeather.unixTime * 1000 | date:'HH:mm' }}</p>
+    </div>
+    <img id="status-img"
+      title="{{ currentWeather.description }}"
+      height="50px"
+      width="50px"
+      src="{{ currentWeather.iconUrl }}"/>
+  </div>
+  <div id="summary">
+    <div id="temperature" title="Temperature">
+      <p>{{ currentWeather.temperatureInKelvin | temperature : 'K':'C' }} C°</p>
+    </div>
+    <div id="summary-separator"></div>
+    <div id="wind-widget-container" title="Wind speed and direction">
+      <app-wind-widget id="wind-widget"
+        speedInMeterPerSecond="{{ currentWeather.windSpeedInMeterPerSecond }}"
+        directionInDegrees="{{ currentWeather.windDirectionInDegrees }}">
+      </app-wind-widget>
+    </div>
+  </div>
+  <div id=detail>
+    <ul id="detail-list">
+      <li>
+        <div title="Pressure">
+          <img alt="Pressure:" src="/assets/icons/wi-barometer.svg"/>
+          <p>{{ currentWeather.pressureInHectoPascal }} hPa</p>
+        </div>
+      </li>
+      <li>
+        <div title="Humidity">
+          <img alt="Humidity:" src="/assets/icons/wi-humidity.svg"/>
+          <p>{{ currentWeather.humidityPercent }}%</p>
+        </div>
+      </li>
+      <li>
+        <div title="Cloudiness">
+          <img alt="Cloudiness:" src="/assets/icons/wi-cloudy.svg"/>
+          <p>{{ currentWeather.cloudinessPercent }}%</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
