@@ -2,8 +2,8 @@
 layout: post
 title: Pixel Raiders [WIP]
 date: 2020-07-30 12:00:00 +0100
-summary: Created for the 48th Ludum dare gamejam
-categories: [Ludum Dare]
+summary: 
+categories: 
 keywords: 2D, idle
 tags:
  - 2D
@@ -11,8 +11,6 @@ tags:
 image:
   path: /assets/img/PixelRaiders.png
 ---
-
-[Download for Windows.](https://freamdev.com/games/PixelRaiders/PixelRaiders.html)
 
 | Version | Date | Description | Play |
 | - | - | - | - |
