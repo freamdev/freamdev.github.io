@@ -29,7 +29,10 @@ panel:
 
 copyright:
   # Shown at the bottom of the post
-  license: null
+  license:
+    template: null
+    name: null
+    link: null
 
   # Displayed in the footer
   brief: All rights reserved.
