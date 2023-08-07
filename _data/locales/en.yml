@@ -27,17 +27,6 @@ panel:
   trending_tags: Trending Tags
   toc: Contents
 
-copyright:
-  # Shown at the bottom of the post
-  license:
-    template: 
-    name:
-    link:
-
-  # Displayed in the footer
-  brief: All rights reserved.
-  verbose: 
-
 meta: Using the :PLATFORM theme :THEME
 
 not_found:
