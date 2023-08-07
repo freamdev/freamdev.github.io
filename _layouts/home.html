@@ -66,8 +66,7 @@ refactor: true
 
           <div class="card-text post-content mt-0 mb-2">
             <p>
-              {% include no-linenos.html summary=post.summary %}
-              {{ summary | markdownify | strip_html | truncate: 200 | escape }}
+              {{ post.summary }}
             </p>
           </div>
 
