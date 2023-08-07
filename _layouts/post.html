@@ -83,7 +83,7 @@ tail_includes:
   {{ content }}
 </div>
 
-<div class="post-tail-wrapper text-muted">
+<div class="post-tail-bottom post-tail-wrapper text-muted">
 
   <!-- categories -->
   {% if page.categories.size > 0 %}
@@ -96,11 +96,10 @@ tail_includes:
   </div>
   {% endif %}
 
-  <!-- tags -->
   
-  <div class="post-tail-bottom
-    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+  <div class="d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
 
+    <!-- tags -->
     <div class="post-tags">
       <i class="fa fa-tags fa-fw me-1"></i>
       {% for tag in page.tags %}
