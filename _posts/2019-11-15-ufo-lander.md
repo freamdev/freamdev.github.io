@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UFO Landing 3D [University]
-date: 2021-11-27 12:00:00 +0100
+date: 2019-11-15 12:00:00 +0100
 summary: Land on the red sphere, avoid EVERYTHING!!!
 categories:
 keywords: ufo, lander
