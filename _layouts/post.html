@@ -87,7 +87,7 @@ tail_includes:
 
   <!-- categories -->
   {% if page.categories.size > 0 %}
-  <div class="post-meta mb-3">
+  <div class="post-meta">
     <i class="far fa-folder-open fa-fw me-1"></i>
     {% for category in page.categories %}
       <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
@@ -96,7 +96,7 @@ tail_includes:
   </div>
   {% endif %}
 
-  <div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pb-2">
+  <div class="post-tail-bottom d-flex justify-content-between align-items-center mt-2 pb-2">
     <!-- tags -->
     <div class="post-tags">
       <i class="fa fa-tags fa-fw me-1"></i>
