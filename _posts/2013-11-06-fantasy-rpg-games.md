@@ -30,7 +30,7 @@ Soon after getting to this point in the game, I runed into major problems with t
 
 With Game of Dragons the dungeon crawling idea shifted a bit toward to randomly generated worlds, with generated dungeons in it for the player to explore. The main design focus was to make a game where I can jump in play a few minutes, and jump out without anything hindering my ability to play.
 
-###Gameplay
+### Gameplay
 
 In Game of Dragons you controll a warrior in a turn based enviroment, trying to find monsters that you are capeable of defeating, and finding equipments for your character. During the game, none of the enemy monsters able to chase you, making you able to choose when and who to fight at every point in the game. 
 
@@ -38,8 +38,8 @@ Killing monsters grants you experience points, wich in turn eventually level you
 
 ### Download
 
-- Source
-- Runnable
+- [Source](https://drive.google.com/file/d/0B0g3dLJ3brDzZlZ1NVJETTd1LWc/edit?usp=sharing)
+- [Runnable](https://drive.google.com/file/d/0B0g3dLJ3brDzTmNEQ1hxZ1FOT1U/edit?usp=sharing)
 
 ### Results
 
