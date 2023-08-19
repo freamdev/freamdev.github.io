@@ -9,7 +9,7 @@ tags:
  - dungeon
  - explorer
 image:
-  path: /assets/img/DungeonExplorer.png
+  path: /assets/img/2019-06-11-dungeon-explorer/dungeon-explorer.png
 ---
 
 [Start playing!](https://freamdev.com/games/DungeonExplorer)

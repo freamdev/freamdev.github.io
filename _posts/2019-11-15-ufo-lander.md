@@ -9,7 +9,7 @@ tags:
  - ufo
  - lander
 image:
-  path: /assets/img/UFOLander.png
+  path: /assets/img/2019-11-15-ufo-lander/ufo-lander.png
 ---
 
 [Start playing!](https://freamdev.com/games/UFOLander)

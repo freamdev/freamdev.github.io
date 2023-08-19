@@ -9,7 +9,7 @@ tags:
  - raid
  - simulator
 image:
-  path: /assets/img/LootBoxes.png
+  path: /assets/img/2020-01-10-loot-boxes/loot-boxes.png
 ---
 
 [Start playing!](https://freamdev.com/games/LootBoxes)

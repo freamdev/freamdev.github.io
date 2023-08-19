@@ -9,7 +9,7 @@ tags:
  - 2D
  - idle
 image:
-  path: /assets/img/PixelRaiders.png
+  path: /assets/img/2020-07-30-pixel-raiders/pixel-raiders.png
 ---
 
 | Play | Version | Date | Description |

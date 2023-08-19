@@ -9,7 +9,7 @@ tags:
  - game
  - ludum-dare
 image:
-  path: /assets/img/TheQuantumMenace.png
+  path: /assets/img/2021-04-25-the-quantum-menace/the-quantum-menace.png
 ---
 
 [Download for Windows.](https://freamdev.com/games/LD48/Windows/TheQuantumMenaceWindows.zip)
