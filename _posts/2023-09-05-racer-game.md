@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Racer game
-date: 2013-09-05 22:41:00 +0100
+date: 2023-09-05 22:41:00 +0100
 summary: Car racing game
 categories: LudicrousRacer
 keywords: racer, gamedev, indiedev
