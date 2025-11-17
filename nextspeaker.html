@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speaker Picker – Sci-Fi Edition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #0a0f1a 0%, #050509 100%);
+      font-family: "Orbitron", sans-serif;
+      color: #9be7ff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700&display=swap');
+
+    .panel {
+      width: 650px;
+      padding: 30px;
+      border-radius: 12px;
+      background: rgba(10, 20, 35, 0.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 190, 255, 0.3),
+                  inset 0 0 25px rgba(0, 150, 255, 0.15);
+      border: 1px solid rgba(0, 200, 255, 0.4);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+      font-size: 26px;
+      text-shadow: 0 0 8px #00eaff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #7cdcff;
+    }
+
+    textarea {
+      width: 100%;
+      height: 90px;
+      background: rgba(0, 10, 20, 0.7);
+      border: 1px solid rgba(0, 200, 255, 0.4);
+      border-radius: 6px;
+      padding: 10px;
+      resize: vertical;
+      font-family: monospace;
+      color: #c7f3ff;
+      font-size: 14px;
+      outline: none;
+      box-shadow: inset 0 0 10px rgba(0, 150, 255, 0.2);
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 2px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: 1px solid #00eaff;
+      background: linear-gradient(135deg, #004e8a, #008fbf);
+      color: white;
+      text-shadow: 0 0 3px #000;
+      box-shadow: 0 0 8px #00d4ff;
+      transition: 0.2s ease-in-out;
+    }
+
+    button:hover {
+      box-shadow: 0 0 15px #00eaff;
+      transform: translateY(-2px);
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #9be7ff;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .speaker {
+      margin-top: 5px;
+      font-size: 32px;
+      text-align: center;
+      font-weight: bold;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+      animation: glow 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 6px #00eaff; }
+      to   { text-shadow: 0 0 16px #00eaff; }
+    }
+
+    .hint {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #79b9d6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="panel">
+    <h1>SPEAKER PROTOCOL</h1>
+    <label for="namesInput">INPUT CREW NAMES (comma-separated)</label>
+    <textarea id="namesInput" placeholder="Alice, Bob, Charlie"></textarea>
+    <button id="startBtn">EXECUTE RANDOM SELECTION</button>
+    
+    <div class="status" id="statusText"></div>
+    <div class="speaker" id="speakerText"></div>
+
+    <div class="hint">Press SPACE to pick the next speaker.<br>Names will not repeat until cycle complete.</div>
+  </div>
+
+  <script>
+    const namesInput = document.getElementById('namesInput');
+    const startBtn = document.getElementById('startBtn');
+    const statusText = document.getElementById('statusText');
+    const speakerText = document.getElementById('speakerText');
+
+    let remainingNames = [];
+    let originalNames = [];
+
+    function parseNames() {
+      const raw = namesInput.value || '';
+      return raw
+        .split(',')
+        .map(n => n.trim())
+        .filter(n => n.length > 0);
+    }
+
+    function resetPoolFromInput() {
+      originalNames = parseNames();
+      remainingNames = [...originalNames];
+    }
+
+    function pickNext() {
+      if (remainingNames.length === 0) resetPoolFromInput();
+      if (remainingNames.length === 0) {
+        speakerText.textContent = '';
+        statusText.textContent = 'NO VALID NAMES DETECTED';
+        return;
+      }
+
+      const index = Math.floor(Math.random() * remainingNames.length);
+      const picked = remainingNames.splice(index, 1)[0];
+
+      speakerText.textContent = picked;
+      statusText.textContent = `NEXT SPEAKER:`.toUpperCase();
+
+      if (remainingNames.length === 0) {
+        statusText.textContent = 'CYCLE COMPLETE — RESETTING ON NEXT COMMAND';
+      }
+    }
+
+    startBtn.addEventListener('click', pickNext);
+
+    document.addEventListener('keydown', (e) => {
+      if (['input', 'textarea'].includes(e.target.tagName.toLowerCase())) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        pickNext();
+      }
+    });
+  </script>
+</body>
+</html>
